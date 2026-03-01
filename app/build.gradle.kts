@@ -18,8 +18,8 @@ android {
         applicationId = "com.ghogho.ghoghochess"
         minSdk = 29
         targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -29,8 +29,8 @@ android {
         if (localPropertiesFile.exists()) {
             localProperties.load(FileInputStream(localPropertiesFile))
         }
-        val admobAppId: String = localProperties.getProperty("ADMOB_APP_ID") ?: "\"ca-app-pub-3940256099942544~3347511713\""
-        val admobBannerId: String = localProperties.getProperty("ADMOB_BANNER_ID") ?: "\"ca-app-pub-3940256099942544/6300978111\""
+        val admobAppId: String = localProperties.getProperty("ADMOB_APP_ID")
+        val admobBannerId: String = localProperties.getProperty("ADMOB_BANNER_ID")
 
         buildConfigField("String", "ADMOB_APP_ID", admobAppId)
         buildConfigField("String", "ADMOB_BANNER_ID", admobBannerId)

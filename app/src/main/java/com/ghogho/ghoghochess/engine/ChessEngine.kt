@@ -77,7 +77,7 @@ class ChessEngine {
     fun undoLastMove(): Boolean {
         if (history.isEmpty()) return false
         
-        val lastState = history.removeLast()
+        val lastState = history.removeAt(history.lastIndex)
         board = lastState.board
         currentTurn = lastState.currentTurn
         isCheck = lastState.isCheck
